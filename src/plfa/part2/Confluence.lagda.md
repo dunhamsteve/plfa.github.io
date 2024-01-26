@@ -382,8 +382,8 @@ to `subst-zero M′`.
 par-subst-zero : ∀{Γ}{A}{M M′ : Γ ⊢ A}
        → M ⇛ M′
        → par-subst (subst-zero M) (subst-zero M′)
-par-subst-zero {M} {M′} p {A} {Z} = p
-par-subst-zero {M} {M′} p {A} {S x} = pvar
+par-subst-zero p {A} {Z} = p
+par-subst-zero p {A} {S x} = pvar
 ```
 
 We conclude this section with the desired corollary, that substitution
